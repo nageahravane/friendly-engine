@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="auth" class="container auth-container">
+        <div class="auth-box">
+            <h2>Login / Signup</h2>
+            <div id="authError" class="error-message"></div>
+        
+            <div class="form-container">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required style="display:none;">
+                
+                <button class="btn" id="signupBtn" onclick="signup()" style="display:none;">Signup</button>
+                <button class="btn" id="loginBtn" onclick="login()">Login</button>
+            </div>
+        
+            <p id="toggleAuth" onclick="toggleAuth()">Don't have an account? Sign up</p>
+        </div>
+    </div>
+
+    <div id="storage" class="storage-container" style="display: none;">
+        <h1>🌤️ Cloud File Storage</h1>
+        
+        <div class="upload-box">
+            <input type="file" id="fileInput">
+            <button class="upload-btn" onclick="uploadFile()">⬆️ Upload</button>
+        </div>
+    
+        <h2>📁 Uploaded Files</h2>
+        <ul id="fileList"></ul>
+    
+        <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+    </div>
+    
+</body>
+</html>
